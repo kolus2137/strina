@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌐 Moje Tryby na Localhost 🌐</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Witaj na stronie z trybami!</h1>
+        <p>Wybierz tryb, aby odkryć nowe możliwości. ✨</p>
+
+        <div class="navigation-tabs">
+            <button class="tab-button active" data-tab="welcome">Start</button>
+            <button class="tab-button" data-tab="satisfaction">Satysfakcja</button>
+            <button class="tab-button" data-tab="virus-sim">Symulacja Wirusa</button>
+            </div>
+
+        <div id="welcome" class="tab-content active">
+            <h2>Witaj!</h2>
+            <p>To jest strona główna. Wybierz jeden z trybów powyżej, aby zobaczyć, co potrafię!</p>
+            <p>Przygotuj się na fajne animacje i interakcje.</p>
+        </div>
+
+        <div id="satisfaction" class="tab-content">
+            <h2>Generuj Satysfakcję!</h2>
+            <p>Wpisz swój nick i poczuj się doceniony/a.</p>
+            <div class="input-section">
+                <input type="text" id="nickInput" placeholder="Wpisz swój nick..." maxlength="20">
+                <button id="generateBtn">Generuj Satysfakcję!</button>
+            </div>
+            <div class="card">
+                <h3>Twoje Satysfakcjonujące Fakty:</h3>
+                <ul id="satisfactionList">
+                    <li>Wpisz nick i kliknij przycisk!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="virus-sim" class="tab-content">
+            <h2>Symulacja Rozprzestrzeniania Wirusa</h2>
+            <p>Zobacz, jak wirus może się rozprzestrzeniać w populacji.</p>
+            <div class="simulation-controls">
+                <button id="startSimBtn">Start Symulacji</button>
+                <button id="resetSimBtn">Reset</button>
+            </div>
+            <canvas id="virusCanvas" width="600" height="400"></canvas>
+            <div class="legend">
+                <span class="legend-item infected"></span> Zarażone
+                <span class="legend-item healthy"></span> Zdrowe
+                <span class="legend-item recovered"></span> Odporne/Wyleczone
+            </div>
+        </div>
+
+        <p class="footer">Stworzone z pasją na localhost! 😊</p>
+    </div>
+
+    <script src="script.js"></script> <script src="virus_simulation.js"></script> </body>
+</html>
